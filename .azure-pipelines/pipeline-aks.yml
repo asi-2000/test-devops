@@ -5,7 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureServiceConnection: 'my-azure-connection'  # Ensure this service connection exists in Azure DevOps.
+  # Replace with the exact name of your service connection
+  azureServiceConnection: 'my-azure-connection'
   terraformWorkingDirectory: './terraform'
   terraformVersion: '1.3.5'
 
