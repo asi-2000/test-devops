@@ -3,5 +3,4 @@ helm repo update
 helm upgrade --install nginx-ingress ingress-nginx/ingress-nginx \
   --namespace ingress-nginx --create-namespace \
   --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-internal"="true" \
-  --set controller.service.loadBalancerIP="<YOUR_INTERNAL_IP>" \
   --version 4.3.0
