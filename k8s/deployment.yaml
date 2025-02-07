@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjsapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjsapp
+  template:
+    metadata:
+      labels:
+        app: nextjsapp
+    spec:
+      containers:
+      - name: nextjsapp
+        image: <Your-ACR-Name>.azurecr.io/nextjsbasicapp:latest
+        ports:
+        - containerPort: 3000
